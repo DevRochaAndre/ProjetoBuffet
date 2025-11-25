@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+    //require "CadastrarClienteForm.php";
     require "CadastrarClienteForm.php";
     ?>
     

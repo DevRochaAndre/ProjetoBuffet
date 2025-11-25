@@ -1,4 +1,4 @@
-<form action="BCadastrarCliente.php" method="post">
+<form action="ProcessarCLiente.php" method="post">
         <pre>
         <label for ="">nome:</label>
         <input type = "text" name="Nome">
