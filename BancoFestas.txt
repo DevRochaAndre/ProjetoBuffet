@@ -1,0 +1,6 @@
+CREATE TABLE festas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomePacote VARCHAR(100),
+    descricao TEXT,
+    valor DECIMAL(10,2)
+);
