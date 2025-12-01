@@ -1,0 +1,18 @@
+<form action="processa.php" method="post">
+<h1><label>Selecione um tipo de festa:</label></h1>
+<select name="opcao1">
+<option value="10">Festa de aniversario comum</option>
+<option value="20">Festa de 15 anos</option>
+<option value="30">Festa de casamento</option>
+</select>
+ 
+<h1><label>Selecione valores para o orçamento:</label></h1>
+<select name="opcao2">
+<option value="5">R$500,00 - R$1.500,00</option>
+<option value="15">R$1.500,00 - R$2.500,00</option>
+<option value="25">R$2.500,00 - R$4.000,00</option>
+<option value="25">R$4.000,00+</option>
+</select>
+ 
+    <p><button type="submit">Enviar</button></p>
+</form>
