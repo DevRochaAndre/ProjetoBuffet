@@ -1,0 +1,36 @@
+<?php
+// Recebe os valores numéricos do formulário
+$op1 = isset($_POST['opcao1']) ? (int)$_POST['opcao1'] : 0;
+$op2 = isset($_POST['opcao2']) ? (int)$_POST['opcao2'] : 0;
+ 
+// Soma os valores
+$total = $op1 + $op2;
+ 
+// ============================================
+//  CONEXÃO COM O BANCO DE DADOS (MySQL)
+// ============================================
+$servername = "localhost";
+$username   = "root";
+$password   = "";
+$dbname     = "meubanco";
+ 
+$conn = new mysqli($servername, $username, $password, $dbname);
+ 
+// Verifica conexão
+if ($conn->connect_error) {
+    die("Erro ao conectar: " . $conn->connect_error);
+}
+ 
+// ============================================
+//  INSERT NO BANCO
+// ============================================
+$sql = "INSERT INTO tabela_resultados (valor_total) VALUES ($total)";
+ 
+if ($conn->query($sql) === TRUE) {
+    echo "Valor total ($total) inserido com sucesso!";
+} else {
+    echo "Erro ao inserir: " . $conn->error;
+}
+ 
+$conn->close();
+?>
