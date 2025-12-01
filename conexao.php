@@ -1,30 +1,26 @@
 <?php
 
-class conexao {
-
+class Conexao
+{
+    private $host = "localhost";
+    private $dbname = "buffet";
+    private $user = "root";
+    private $pass = "root";
     public $pdo;
-    public $host = 'localhost';
-    public $user = 'root';
-    public $pass = '';
-    public $dbname = 'buffet';
 
-    public function abrirConexao() {
-
+    public function AbrirConexao()
+    {
         try {
             $this->pdo = new PDO(
                 "mysql:host={$this->host};dbname={$this->dbname};charset=utf8",
                 $this->user,
                 $this->pass
             );
-
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        } catch(PDOException $e){
-            echo "Erro ao se conectar: " . $e->getMessage();
+        } catch (PDOException $e) {
+            die("Erro na conexão: " . $e->getMessage());
         }
-    }
 
-    public function getPdo() {
         return $this->pdo;
     }
 }
