@@ -1,0 +1,8 @@
+create database buffet2;
+use buffet2;
+
+CREATE TABLE tabela_resultados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    valor_total INT NOT NULL,
+    data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
